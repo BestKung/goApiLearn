@@ -1,0 +1,13 @@
+package config
+
+import (
+	"goApiLearn/controller"
+
+	"github.com/gofiber/fiber/v2"
+)
+
+func InitApiConfig() {
+	app := fiber.New()
+	controller.GetCustomer(app)
+	app.Listen(":8080")
+}

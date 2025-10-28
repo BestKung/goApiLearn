@@ -1,18 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/gofiber/fiber/v2"
-)
+import "goApiLearn/config"
 
 func main() {
-	app := fiber.New()
-
-	fmt.Printf("%T", app)
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
-
-	app.Listen(":8080")
+	config.InitApiConfig()
 }
