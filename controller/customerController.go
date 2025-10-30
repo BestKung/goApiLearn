@@ -6,6 +6,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+func NewCustomerController(app *fiber.App) {
+	GetCustomer(app)
+}
+
 func GetCustomer(app *fiber.App) {
 	app.Get("/customers", func(c *fiber.Ctx) error {
 		custs := []model.Customer{

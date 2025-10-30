@@ -8,6 +8,6 @@ import (
 
 func InitApiConfig() {
 	app := fiber.New()
-	controller.GetCustomer(app)
+	controller.NewCustomerController(app)
 	app.Listen(":8080")
 }
